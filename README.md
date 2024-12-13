@@ -2,7 +2,7 @@
 # 🌟 OD 데이터를 통한 창업 지역 및 분야 추천
 🚀 **창업핑 빅데이터 분석 프로젝트**
 
-![Animation](https://drive.google.com/uc?id=1Kz8HM2qSak8u1XIuyqL_uRBhRshZTSrz)
+![Animation](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTc4emxlc2FtbXp4emlxbmd4aDV1NHFueDF2MGJpcHBhZjlzaG4zbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KSuVFP9s7ergXUpX50/giphy.gif)
 
 
 
@@ -38,11 +38,11 @@
 
 | 데이터명           | 규모             | 주소                     |
 | ----------------- |----------------- | -------------------------|
-| SKT OD 생활이동 공개데이터 | 1억 5천만 |https://www.bigcontest.or.kr/                             |
-| 서울시 상권분석서비스(영역-상권배후지) | 1,072 |https://data.seoul.go.kr/dataList/OA-22159/S/1/datasetView.do|
-| 서울시 상권분석서비스(길단위인구-상권배후지) | 23,979 |https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
-| 서울시 상권분석서비스(추정매출-상권배후지) | 220,846 |https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
-| 서울시 상권분석서비스(직장인구-상권배후지) | 21,801 |https://data.seoul.go.kr/dataList/OA-15570/S/1/datasetView.do|
+| SKT OD 생활이동 공개데이터 | 1억 5천만 |[링크]https://www.bigcontest.or.kr/                             |
+| 서울시 상권분석서비스(영역-상권배후지) | 1,072 |[링크]https://data.seoul.go.kr/dataList/OA-22159/S/1/datasetView.do|
+| 서울시 상권분석서비스(길단위인구-상권배후지) | 23,979 |[링크]https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
+| 서울시 상권분석서비스(추정매출-상권배후지) | 220,846 |[링크]https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
+| 서울시 상권분석서비스(직장인구-상권배후지) | 21,801 |[링크]https://data.seoul.go.kr/dataList/OA-15570/S/1/datasetView.do|
 
 
 
@@ -301,3 +301,12 @@ importances = model.feature_importances_
 ## 시각화
 
 ## 📊 웹 페이지 구현
+![main](https://github.com/user-attachments/assets/29614f61-2ef2-45ba-b399-0f9b79c887e0)
+![page1](https://github.com/user-attachments/assets/590cc585-c4f5-44b5-b205-6bee29eeeec9)
+![page1-2](https://github.com/user-attachments/assets/c4acc63c-7d9a-49af-940c-8fe44ddbd993)
+![page1-3](https://github.com/user-attachments/assets/5061936c-c64c-47b9-8ea3-837d801f362d)
+![page2](https://github.com/user-attachments/assets/b57a27a2-61a7-4c2b-b341-4274e82beb72)
+![page2-2](https://github.com/user-attachments/assets/7c6a29de-afba-4d36-b691-370b0e154816)
+![page3](https://github.com/user-attachments/assets/10dc8272-1c2a-4b91-8cc1-48ffbb4c7f16)
+![page3-2](https://github.com/user-attachments/assets/724d60b2-ec8e-4c8f-9e13-f467649735af)
+![page3-3](https://github.com/user-attachments/assets/5f8ef55a-8f16-4a4b-ab8a-c75cad016cfe)
