@@ -2,7 +2,7 @@
 # 🌟 OD 데이터를 통한 창업 지역 및 분야 추천
 🚀 **창업핑 빅데이터 분석 프로젝트**
 
-![Animation](https://drive.google.com/uc?id=1Kz8HM2qSak8u1XIuyqL_uRBhRshZTSrz)
+![Animation](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTc4emxlc2FtbXp4emlxbmd4aDV1NHFueDF2MGJpcHBhZjlzaG4zbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KSuVFP9s7ergXUpX50/giphy.gif)
 
 
 
@@ -38,11 +38,11 @@
 
 | 데이터명           | 규모             | 주소                     |
 | ----------------- |----------------- | -------------------------|
-| SKT OD 생활이동 공개데이터 | 1억 5천만 |https://www.bigcontest.or.kr/                             |
-| 서울시 상권분석서비스(영역-상권배후지) | 1,072 |https://data.seoul.go.kr/dataList/OA-22159/S/1/datasetView.do|
-| 서울시 상권분석서비스(길단위인구-상권배후지) | 23,979 |https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
-| 서울시 상권분석서비스(추정매출-상권배후지) | 220,846 |https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
-| 서울시 상권분석서비스(직장인구-상권배후지) | 21,801 |https://data.seoul.go.kr/dataList/OA-15570/S/1/datasetView.do|
+| SKT OD 생활이동 공개데이터 | 1억 5천만 |[링크]https://www.bigcontest.or.kr/                             |
+| 서울시 상권분석서비스(영역-상권배후지) | 1,072 |[링크]https://data.seoul.go.kr/dataList/OA-22159/S/1/datasetView.do|
+| 서울시 상권분석서비스(길단위인구-상권배후지) | 23,979 |[링크]https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
+| 서울시 상권분석서비스(추정매출-상권배후지) | 220,846 |[링크]https://data.seoul.go.kr/dataList/OA-15582/S/1/datasetView.do|
+| 서울시 상권분석서비스(직장인구-상권배후지) | 21,801 |[링크]https://data.seoul.go.kr/dataList/OA-15570/S/1/datasetView.do|
 
 
 
@@ -207,87 +207,7 @@ spark-submit /home/hadoop/cal.py
 랜덤 포레스트 회귀 모델을 사용하여 데이터를 학습하고, 예측값과 실제값 간의 관계를 분석합니다. 데이터 로드, 전처리, 학습, 평가, 시각화까지의 전체 과정을 다룹니다.
 
 ---
-
-#### 📂 1. 필요한 라이브러리 임포트
-
-```python
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, r2_score
-import matplotlib.pyplot as plt
-```
-- `numpy`: 수치 계산을 위한 라이브러리
-- `pandas`: 데이터 프레임 처리
-- `scikit-learn`: 모델 학습, 평가 및 데이터 분리
-- `matplotlib`: 데이터 시각화
-
-#### 📂 2. 데이터 로드 및 확인
-
-```python
-file_path = 'D:\\study\\class\\빅데\\random_forest_label_8_대피.csv'
-rf_data = pd.read_csv(file_path)
-
-print("Data Head:\n", rf_data.head())
-print("Data Description:\n", rf_data.describe())
-```
-- 데이터를 지정된 경로에서 로드
-- `head()`: 데이터의 상위 5개 행을 출력
-- `scikit-learn`: 모델 학습, 평가 및 데이터 분리
-- `describe()`: 데이터의 통계 요약 정보를 제공
-
-#### 📂 3. 입력 변수와 출력 변수 분리
-```python
-X = rf_data[['gender', 'age', 'purpose', 'dest_hdong_cd']]
-y = rf_data['score']
-
-```
-- `X`: 입력 변수
-  - `gender`: 성별
-  - `age`: 나이
-  - `purpose`: 목적
-  - `dest_hdong_cd`: 목적지 코드
-
-- `y`: 출력 변수
-  - `score`: 예측하려는 값
-  
-#### 📂 4. 데이터 분리
-```python
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-```
-- 데이터를 학습 데이터와 테스트 데이터로 나눔눔
-- `test_size=0.2`: 테스트 데이터 비율은 20%로 설정
-- `random_state=42`: 결과 재현성을 보장하기 위한 고정값
-
-#### 📂 5. 랜덤 포레스트 모델 학습
-```python
-model = RandomForestRegressor(n_estimators=100, max_depth=20, random_state=42)
-```
-- `n_estimators`: 랜덤 포레스트 트리의 개수 (100개)
-- `max_depth`:각 트리의 최대 깊이 (20단계)
-- `random_state`: 결과 재현성을 보장
-
-#### 📂 6. 모델 예측
-```python
-y_pred = model.predict(X_test)
-```
-- 학습된 모델을 사용해 테스트 데이터의 값을 예측
-
-#### 📂 7. 성능 평가
-```python
-mse = mean_squared_error(y_test, y_pred)max_depth=20, random_state=42)
-r2 = r2_score(y_test, y_pred)
-```
-- 평가 결과
-- `MSE (Mean Squared Error)`: 예측값과 실제값 간의 오차를 평가
-- `R² (R-squared Score)`: 모델의 성능을 측정 (1에 가까울수록 좋음)
-
-#### 📂 8. Feature Importance 확인
-```python
-importances = model.feature_importances_
-```
-- 각 입력 변수`(X)`가 모델 예측에 미치는 영향을 출력
+[![프로젝트 코드](https://img.shields.io/badge/go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](/model)
 
 ### 모델 가중치
 
@@ -297,7 +217,33 @@ importances = model.feature_importances_
 
 
 
-
 ## 시각화
 
 ## 📊 웹 페이지 구현
+#### 메인 화면
+![main](https://github.com/user-attachments/assets/29614f61-2ef2-45ba-b399-0f9b79c887e0)
+
+#### 지역 점수 계산
+- `지역입력`: 동단위 지역 입력받기
+- `타겟 연령층`: 10대~80대 이상
+- `진출 분야`: 업무, 학업, 쇼핑여가, 귀가, 여행, 기타 등
+- `성별`: 남 /  여
+![page1](https://github.com/user-attachments/assets/590cc585-c4f5-44b5-b205-6bee29eeeec9)
+
+#### 지역 점수 계산 결과
+![page1-2](https://github.com/user-attachments/assets/c4acc63c-7d9a-49af-940c-8fe44ddbd993)
+![page1-3](https://github.com/user-attachments/assets/5061936c-c64c-47b9-8ea3-837d801f362d)\
+
+#### 지역 추천
+- `타겟 연령층`: 10대~80대 이상
+- `진출 분야`: 업무, 학업, 쇼핑여가, 귀가, 여행, 기타 등
+- `성별`: 남 /  여
+![page2](https://github.com/user-attachments/assets/b57a27a2-61a7-4c2b-b341-4274e82beb72)
+
+#### 지역 추천 결과
+![page2-2](https://github.com/user-attachments/assets/7c6a29de-afba-4d36-b691-370b0e154816)
+
+#### 서울시 상권 데이터 군집화 시각화 지도
+![page3](https://github.com/user-attachments/assets/10dc8272-1c2a-4b91-8cc1-48ffbb4c7f16)
+![page3-2](https://github.com/user-attachments/assets/724d60b2-ec8e-4c8f-9e13-f467649735af)
+![page3-3](https://github.com/user-attachments/assets/5f8ef55a-8f16-4a4b-ab8a-c75cad016cfe)
